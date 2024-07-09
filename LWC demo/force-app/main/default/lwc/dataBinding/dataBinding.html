@@ -1,0 +1,26 @@
+<template>
+         Hello {greetings}
+   
+        
+        <lightning-input name ='fName'  label = "First Name" onchange={handlechange}></lightning-input>
+        <lightning-input name='lName'  label = "Last Name"  onchange={handlechange}></lightning-input>
+        <div>getterValue:{upperCaseText}</div>
+<lightning-card>
+        <lightning-layout>
+                <lightning-layout-item>
+                        <lightning-button-menu></lightning-button-menu>
+                        <lightning-input type ='number' label="phone"></lightning-input>
+                </lightning-layout-item>
+        </lightning-layout>
+</lightning-card>
+<div>
+        <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemTwo" label="Menu Item Two"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemThree" label="Menu Item Three"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemFour" label="Menu Item Four"></lightning-menu-item>
+            </lightning-button-menu>
+        <lightning-input type ='number' label="phone"></lightning-input>
+</div>  
+    
+</template>

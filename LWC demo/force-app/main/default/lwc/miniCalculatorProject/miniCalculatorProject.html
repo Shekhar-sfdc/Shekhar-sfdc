@@ -1,0 +1,37 @@
+<template>
+    
+    <lightning-input type="checkbox" label="Do you have message" onchange={onSelectHandler}></lightning-input>
+    <template  if:true= {message}>
+    <p>i'm showing this beacuse you message is true</p>
+    </template>
+    <template if:false= {message}>
+        <p>I'm appearing beacuse i'm false</p>
+    </template>
+    <template for:each={listOfNames} for:item="name">
+        <p key={name}>
+            {name}
+        </p>
+    </template>
+    <lightning-card>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item>
+                <lightning-input type="number" label="firstNumber" name="firstNumbers" onchange={handleChangeEvent}></lightning-input>
+            </lightning-layout-item>
+        <lightning-layout-item>
+                <lightning-input type="number" label="LastNumber" name="secondNumbers" onchange={handleChangeEvent}></lightning-input>
+            </lightning-layout-item>
+       <lightning-layout-item>
+        <lightning-button-group>
+            <lightning-button label="add" icon-name="utility:add" onclick={addNumbers}></lightning-button>
+            <lightning-button label="subtract" icon-name="utility:dash" onclick={subNumbers}></lightning-button>
+            <lightning-button label="multiply" icon-name="utility:close" onclick={multiNumbers}></lightning-button>
+            <lightning-button label="division" icon-name="utility:magicwand" onclick={divNumbers}></lightning-button>
+        </lightning-button-group>
+    </lightning-layout-item>
+    <lightning-layout-item>
+        <lightning-formatted-text value={returnvalue}></lightning-formatted-text>
+    </lightning-layout-item>
+    
+    </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <c-p2c-carousel-comp carousel-list={carouselArr}></c-p2c-carousel-comp>
+    <lightning-card title="Passing data to child">
+       <lightning-input type="text" label="Enter value" onkeyup={changeaHandler} value={valueHandler}>
+       </lightning-input>
+       <c-p2c-progress-bar passingvalue={valueHandler}></c-p2c-progress-bar>
+    </lightning-card>
+<lightning-card>
+    <lightning-button variant="Brand" label="reset" onclick={resetHandle}></lightning-button>
+    <c-p2c-slider></c-p2c-slider>
+</lightning-card>
+
+</template>

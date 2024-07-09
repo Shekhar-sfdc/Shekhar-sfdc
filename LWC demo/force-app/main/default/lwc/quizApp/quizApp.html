@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Today's Quiz">
+        <div>you have scored {correctAnswers} out of {Questions.length}</div>
+       <template for:each={Questions} for:item="question">
+        <div key={question.id} class="slds-var-m-around_large">
+            <div><strong>{question.id}: {question.Question}</strong></div>
+            <div> 
+                <input type="radio" name={question.id} value="a" onchange={choosenOption}>
+                {question.option.a}
+               </div>
+            <div> <input type="radio" name={question.id} value="b" onchange={choosenOption}>
+                {question.option.b}
+             </div>
+            <div> <input type="radio" name={question.id} value="c" onchange={choosenOption}>
+                {question.option.c}
+            </div>
+        </div>
+       </template>
+    <lightning-button 
+    variant="Brand" 
+    label="Submit" 
+    disabled={isSelectedAll}
+    onclick={submitHandler} class="slds-var-p-around_medium">
+</lightning-button>
+    <lightning-button 
+    variant="Brand" 
+    label="reset" 
+    onclick={resetHandler}>
+</lightning-button>
+    </lightning-card>
+</template>

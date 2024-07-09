@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="for Loop">
+        
+            <template for:each={cities} for:item="city">
+                <ul key={city} class="slds-var-m-around_medium">
+                    <li>{city}</li>
+                </ul>
+                
+            </template>
+       
+        </lightning-card>
+        <lightning-card title="iterator looping">
+            <template iterator:it={cities}>
+                <ul key={it.value} class="slds-list_dotted">
+                    <li>{it.value}</li>
+                </ul>
+            </template>
+        </lightning-card>
+        <lightning-card title="iterating Objects">
+            <template iterator:it={companies}>
+                <ul key={it.value.id} class="slds-list_ordered">
+                    <li>{it.value.ceo}</li>
+                </ul>
+            </template>
+        </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+<lightning-file-upload 
+label="upload photo/resume"
+name="upload document"
+accept={acceptedformats}
+record-id={recordId}
+file-field-name="Guest_file_fileupload__c"
+file-field-value={encryptedToken}
+onuploadfinished={UploadFinished}
+></lightning-file-upload>
+</template>

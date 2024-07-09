@@ -1,0 +1,12 @@
+<template>
+<lightning-card title="Contacts list" icon-name="custom:cutsom14">
+<template if:true={account.data}> {name}</template>
+<template for:each={contacts} for:item="contact"> 
+    <p key={contact.Id}> 
+        {contact.FirstName}  {contact.LastName}
+    </p> 
+            
+
+</template>
+</lightning-card>
+</template>   

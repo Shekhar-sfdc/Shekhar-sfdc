@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Conditional Renedering">
+        <lightning-input type="text" label="enter name" onchange={nameChange}></lightning-input>
+        <template if:true={showname}>
+            <div>showing the my name is true</div>
+        </template>
+        <template if:false={shownmae}>
+            <div> Enter to show the name correctly</div>
+        </template>
+    </lightning-card>
+</template>
